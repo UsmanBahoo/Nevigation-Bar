@@ -1,14 +1,14 @@
-
 *{
     margin:0;
     padding:0;
-
+}
 body{
-    background-image:url(../Image/WhatsApp\ Image\ 2023-07-11\ at\ 14.52.02.jpg);
-    background-size:cover;
-    background-position:center;
+    background-image: url(../Image/WhatsApp\ Image\ 2023-07-11\ at\ 14.52.02.jpg);
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    height:600px;
+    min-height: 100vh;
+    height: auto;
 }
 .first{
    background-color:#FF0000;
@@ -21,12 +21,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s;
 }
 .nav-bar ul li{
     list-style:none ;
     padding:10px 20px;
-    position: relative;
 }
 .nav-bar ul li a{
     text-decoration: none;
@@ -52,7 +50,6 @@ body{
     background:transparent;
     align-items:left;
     border-radius:0;
-    position: relative;
 }
 .nav-bar ul li:hover .list ul li:last-child{
     border-bottom:none;
@@ -64,60 +61,46 @@ body{
     padding-left:10px;
 }
 
-/* Responsive styles */
+/* Responsive Styles */
 @media (max-width: 991px) {
     .nav-bar ul {
         flex-direction: column;
         align-items: flex-start;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 60px;
         background: #ff0000;
-        z-index: 1000;
+        width: 100%;
+        padding: 0;
     }
     .nav-bar ul li {
         width: 100%;
-        padding: 15px 20px;
+        padding: 10px 10px;
         border-bottom: 1px solid #fff2;
     }
     .nav-bar ul li .list {
         position: static;
         margin-top: 0;
-        background: #b30000;
+        width: 100%;
     }
     .nav-bar ul li .list ul li {
         width: 100%;
         padding: 10px 20px;
-        background: transparent;
-    }
-    .nav-bar ul li:hover .list {
-        position: static;
-        margin-top: 0;
     }
 }
-}
-/* Hide hamburger by default */
-.hamburger {
-    display: none;
-    font-size: 2rem;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    z-index: 1001;
-}
-.nav-bar ul.show {
-    display: flex !important;
-}
-@media (max-width: 991px) {
-    .hamburger {
-        display: block;
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 5px;
+        width: 100%;
     }
-    .nav-bar {
-        position: relative;
+    .nav-bar ul {
+        font-size: 15px;
+    }
+    .nav-bar ul li {
+        padding: 8px 5px;
+    }
+    .nav-bar ul li .list ul li {
+        padding: 8px 10px;
+    }
+    .first {
+        padding: 10px 0;
     }
 }
