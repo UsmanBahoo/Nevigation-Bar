@@ -1,34 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Document</title>
-    <link rel="stylesheet" href="Css/bootstrap.min.css" />
-    <link rel="stylesheet" href="Css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header class="first">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="nav-bar">
-              <ul>
-                <li>
-                  <i class="fa-solid fa-house-chimney"></i>
-                  <a href="" class="active">HOME</a>
-                  <div class="list">
-                    <ul>
-                      <li><a href="">MISSION</a></li>
-                      <li><a href="">VISION</a></li>
-                      <li><a href="">TEAM</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <i class="fa-solid fa-user"></i>
+
                   <a href="">ABOUTUS</a>
                   <div class="list">
                     <ul>
@@ -116,5 +87,18 @@
         </div>
       </div>
     </header>
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById('mainMenu');
+        menu.classList.toggle('show');
+      }
+      // Optional: Hide menu on resize if desktop
+      window.addEventListener('resize', function() {
+        var menu = document.getElementById('mainMenu');
+        if(window.innerWidth > 991) {
+          menu.classList.remove('show');
+        }
+      });
+    </script>
   </body>
 </html>
